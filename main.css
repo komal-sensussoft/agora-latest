@@ -1,0 +1,74 @@
+body {
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+
+#join-btn {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    font-size: 18px;
+    padding: 20px 40px;
+}
+
+#stream-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#local-user {
+    width: 30%; /* Adjust the width of the local user video */
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#video-streams {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 90vh;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.video-container {
+    width: 48%; /* Adjust the width of each remote user's video container */
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.video-player {
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    border: none;
+    background-color: cadetblue;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+#stream-controls {
+    display: none;
+    justify-content: center;
+    margin-top: 0.5em;
+}
+
+@media screen and (max-width: 1400px) {
+    #video-streams {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        width: 95%;
+    }
+}
